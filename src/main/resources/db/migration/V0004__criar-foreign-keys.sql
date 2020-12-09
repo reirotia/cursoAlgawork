@@ -1,0 +1,10 @@
+alter table cidade add constraint FK_cidade_estado foreign key (estado_id) references estado (id);
+alter table grupo_permissao add constraint FK_permissao_grupo foreign key (permissao_id) references permissao (id);
+alter table grupo_permissao add constraint FK_grupo_permissao foreign key (grupo_id) references grupo (id);
+alter table produto add constraint FK_produto_restaurante foreign key (restaurante_id) references restaurante (id);
+alter table restaurante add constraint FK7_restaurante_cozinha foreign key (cozinha_id) references cozinha (id);
+alter table restaurante add constraint FK_restaurante_cidade foreign key (endereco_cidade_id) references cidade (id);
+alter table restaurante_forma_pagamento add constraint FK_restaurante_forma foreign key (forma_pagamento_id) references forma_pagamento (id);
+alter table restaurante_forma_pagamento add constraint FK_forma_restaurante foreign key (restaurante_id) references restaurante (id);
+alter table usuario_grupo add constraint FK_usuario_grupo foreign key (grupo_id) references grupo (id);
+alter table usuario_grupo add constraint FK_grupo_usuario foreign key (usuario_id) references usuario (id);
